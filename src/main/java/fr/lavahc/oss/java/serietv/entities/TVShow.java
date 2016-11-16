@@ -61,5 +61,8 @@ public class TVShow {
 		this.rateCount = rateCount;
 	}
 	
+	public String toString() {
+		return "["+this.id+"]\t"+this.name;
+	}
 	
 }
