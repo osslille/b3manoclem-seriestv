@@ -25,12 +25,9 @@ public class App
 			e.printStackTrace();
 		}
         TVShowsDoc showsDoc = gson.fromJson(reader, TVShowsDoc.class);
-        showsDoc.getTvShows().sort(new AlphabeticComparator());
-        for(int i = 0; i < showsDoc.getTvShows().size(); i++) {
-        	System.out.println((i+1)+". "+showsDoc.getTvShows().get(i));
-        }
-        String test = "aa";
-        String test2 = "bb";
-        System.out.println(test.charAt(0));
+        List<TVShow> mShows = Utils.researchShowByActor("brown", showsDoc.getActors(), showsDoc.getTvShows());
+        System.out.println(mShows.size() + " result(s) found.");
+        for(int i = 0; i < mShows.size(); i++)
+        	System.out.println((i+1)+". "+mShows.get(i));
     }
 }

@@ -62,7 +62,10 @@ public class TVShow {
 	}
 	
 	public String toString() {
-		return "["+this.id+"]\t"+this.name;
+		return "\t\""+this.name+"\"\n"+
+				"\tDescription :\t"+this.overview+"\n"+
+				"\tGenres :\t"+this.genre+"\n"+
+				"\tRate :\t\t"+this.rate+"*\n";
 	}
 	
 }
