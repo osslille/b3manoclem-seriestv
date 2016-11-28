@@ -47,5 +47,8 @@ public class Actor {
 		this.role = role;
 	}
 	
+	public String toString() {
+		return this.name;
+	}
 	
 }
